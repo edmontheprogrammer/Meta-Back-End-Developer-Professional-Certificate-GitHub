@@ -1,0 +1,27 @@
+h1 {
+    color: purple; 
+}
+
+#header1 {
+    color: green;
+}
+
+p {
+    color: blue;
+}
+
+#latest {
+    background-color: orange;
+}
+
+.navigation {
+    margin: 2px;
+}
+
+#blog > h1 {
+    color: yellow;
+}
+
+a:hover {
+    color: orange;
+}
