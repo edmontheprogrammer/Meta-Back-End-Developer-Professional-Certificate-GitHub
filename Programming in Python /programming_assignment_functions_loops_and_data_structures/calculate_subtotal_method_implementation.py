@@ -12,17 +12,19 @@ menu = {
 }
 
 
-def calculate_subtotal(order):
-    prices_array = []
+def calculate_subtotal(order_list):
     sum = 0
+    prices_array = []
     for key, value in menu.items():
         for key_2, value_2 in value.items():
             if type(value_2) == float:
                 prices_array.append(value_2)
     for price in prices_array:
         sum += price
-    total_price = round(sum, 2)
-    print(total_price)
+    total_sum = round(sum, 2)
+    return total_sum
 
 
-calculate_subtotal(menu)
+test_order_list_data = [1, 2, 4]
+sum_value = calculate_subtotal(test_order_list_data)
+print(sum_value)
