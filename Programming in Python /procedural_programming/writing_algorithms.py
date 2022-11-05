@@ -86,4 +86,4 @@
 #
 # Greedy algorithm:
 #
-#   Greedy algorithm finds the best solution in eahc and every step instead of approaching optimization in a global way. ##
+#   Greedy algorithm finds the best solution in each and every step instead of approaching optimization in a global way. ##

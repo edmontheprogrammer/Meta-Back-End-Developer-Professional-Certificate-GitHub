@@ -1,0 +1,45 @@
+# Intro to Big-O notation:
+#
+# Big-O:
+#   Everything we do needs to measured. Why you might ask? To maks something better you need a metric to start from. If a
+# car company needs to make a fster car they need to know the top speed of the existing car to improve on it. In computer
+# science, Big-O notation is the most fundamental tool to measure the cost of an algorithm. It describes the complexity
+# of the code using algebraic terms.
+#
+# <Image to be inserted>
+#
+# Big-O has different types of measures as you can see in the diagram above. These measures determine the running speed and
+# cost of your code.
+#
+# Algorithmic complexity:
+#   Algorithmic complexity is a measure of how long an alogrithm will take to complete given the size of the input, or what
+# is commonly called "b" or "n times". The "n" represents the number of elements. Algorithm complexity can be divided into
+# two types:
+#
+#   * Time complexity
+#   * Space complexity
+#
+# In computer science, time refers to how long an algorithm takes to complete. Space complexity refers to the amount of
+# memory needed to complete the algorithm. When an algorithm is created by a programmer they also need to consider these
+# two critical measures so that the program runs efficiently. You can measure the efficiency by using a concept called
+# Big-O Notation. The below table showcases the fastest to slowest of these different categories:
+#
+# Function:         Big O Notation:
+#
+#   Constant            O(C)
+#   Logarithmic         O(log(n))
+#   Linear              O(n)
+#   Quadratic           O(n^2)
+#   Cubic               O(n^3)
+#   Exponential         O(2^n)
+#   Factorial           O(n!)
+#
+#
+# Why does it matter?
+#   You might be wondering why you as a developer need to know about Big O and the importance of applying and understanding
+# it. Badly written code is costly in today's world of scalable solutions. Optimized code has many benefits. For one, it
+# will ensure your user experince is delivered to the highest standard. Faster code means a better experince from a user's
+# perspective. No one likes looking at a spinner on-screen while they wait for items to load.
+#
+# Learning about and knowning how to apply Big-O to your code will help you grow as a developer and it will improve your
+# code.  ##

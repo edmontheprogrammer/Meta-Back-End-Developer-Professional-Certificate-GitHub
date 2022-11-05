@@ -55,3 +55,34 @@
 
 # Step 3: Implement the solution (Solve the problem!). This is taking the pesudocodes in step 2 and
 #           solving the actual problem in code.
+
+
+# * Make a cup of coffee - suggested solution:
+#
+# Solution algorithm:
+#
+# Input:
+#
+#   Ingredients required:
+#       * Cup
+#       * Hot water
+#       * Coffee granules
+#
+#   Optional:
+#       * Milk
+#       * Cream
+#       * Sugar
+#
+#   Output:
+#       * A cup of coffee.
+#
+#   Steps:
+#       1. Add drinking water to an electric kettle.
+#       2. Put the kettle on the boil water
+#       3. While waiting, prepare coffee.
+#           * 4. Add coffee granules on the cup
+#           * 5. If water is boiled, pour water into a cup, else continue
+#                   to wait.
+#       6. If milk or cream is required, add and stir
+#       7. If sugar is required, add and stir
+#       8. Return coffee ##
