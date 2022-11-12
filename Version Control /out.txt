@@ -1,0 +1,9 @@
+total 1416
+-rw-r--r--@ 1 edmonsebit  staff  300496  9 Nov 14:22 Gen25 - Full Stack Developer.pdf
+-rw-r--r--@ 1 edmonsebit  staff  405266  8 Nov 15:36 Git Cheat Sheet.pdf
+-rw-r--r--  1 edmonsebit  staff    3420  8 Nov 16:31 Version control in professional software development.py
+drwxr-xr-x  3 edmonsebit  staff      96 10 Nov 11:22 archive
+-rw-r--r--  1 edmonsebit  staff      46 11 Nov 07:28 input.txt
+-rw-r--r--  1 edmonsebit  staff       0 11 Nov 07:30 out.txt
+drwxr-xr-x  2 edmonsebit  staff      64 10 Nov 11:19 projects
+-rw-r--r--  1 edmonsebit  staff    4672 11 Nov 07:17 staging_vs_production.py
