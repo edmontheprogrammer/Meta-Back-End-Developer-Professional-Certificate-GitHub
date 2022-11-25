@@ -6,6 +6,6 @@ from django.http import HttpResponse
 # This is our view function.
 
 
-def index(request):
-    content = "<html><body><h1>Hello, world. This is the index of the Demoapp.</h1></body></html>"
+def demoappHome(request):
+    content = '<html><body style="background-color:green;"><h1 style="color:brown;">Hello, world. This is the index of the Demoapp.</h1></body></html>'
     return HttpResponse(content)

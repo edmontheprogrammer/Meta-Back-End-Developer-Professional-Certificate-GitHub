@@ -16,14 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from myapp import views
+# from myapp import views
 
 # Note 1: http://127.0.0.1:2000/ ---> maps to '' or home page
-# So empty strings, '' , defaults to the localhost or 127.0.0.1 plsu
+# So empty strings, '' , defaults to the localhost or 127.0.0.1 plus
 # the port number
 # Note 2: http://127.0.0.1:2000/demo/ ---> maps to 'demo'
 urlpatterns = [
-    path('demoapp/', include('demoapp.urls'), name='demoapp'),
+    path('demoapp_home/', include('demoapp.urls'), name='demoapp-home'),
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', include('myapp.urls'), name='myapp-home'),
+    path('mysecondapp_home/', include('mysecondapp.urls'), name='mysecondapp-home'),
+    # path('myapp_home', views.myapphome, name='myapp-home'),
+    # path('myapp_about', views.myappabout, name='myapp-about'),
+    # path('myapp_littlelemon', views.myapplittlelemon,
+    #     name='myapp-little-lemon-restaurant'),
 ]
