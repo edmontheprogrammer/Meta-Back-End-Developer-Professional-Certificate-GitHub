@@ -23,9 +23,9 @@ from django.urls import path, include
 # the port number
 # Note 2: http://127.0.0.1:2000/demo/ ---> maps to 'demo'
 urlpatterns = [
-    path('demoapp_home/', include('demoapp.urls'), name='demoapp-home'),
     path('admin/', admin.site.urls),
     path('', include('myapp.urls'), name='myapp-home'),
+    path('demoapp_home/', include('demoapp.urls'), name='demoapp-home'),
     path('mysecondapp_home/', include('mysecondapp.urls'), name='mysecondapp-home'),
     # path('myapp_home', views.myapphome, name='myapp-home'),
     # path('myapp_about', views.myappabout, name='myapp-about'),
