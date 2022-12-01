@@ -27,8 +27,11 @@ urlpatterns = [
     path('', include('myapp.urls'), name='myapp-home'),
     path('demoapp_home/', include('demoapp.urls'), name='demoapp-home'),
     path('mysecondapp_home/', include('mysecondapp.urls'), name='mysecondapp-home'),
+    path('newapp', include('newapp.urls')),
     # path('myapp_home', views.myapphome, name='myapp-home'),
     # path('myapp_about', views.myappabout, name='myapp-about'),
     # path('myapp_littlelemon', views.myapplittlelemon,
     #     name='myapp-little-lemon-restaurant'),
 ]
+
+handler404 =  'chefsTable.views.handler404'

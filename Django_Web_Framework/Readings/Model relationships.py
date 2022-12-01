@@ -1,0 +1,86 @@
+from django.db import models
+
+# Model Relationships:
+#
+#   In this reading, you will explore the different types of relationships between Django models.
+#
+# Primay Key:
+#
+#    In a relational database, each table that represents an entity has one column that has a unique value for each row.
+# Such a column or field is known as the "Primay Key".
+#
+# If the primary key of one table appears as one of the fields in another table while having its own primary key, then it
+# is called a "Foreign Key".
+#
+# For example, in a Product table, the "ProductID" field is its primary key.
+#
+# In the Customer's table, the "ProductID" field, "which refers to the product purchased by the customer", becomes the
+# foreign key.
+#
+# The idea behind designing related tables is to avoid "data redudancy" unnecessary repetition of the same data in many
+# rows and ensure "data integrity"
+#
+# If the unique "ProductID" in the Customers' table is replaced by a longer naming convention for the product field, it
+# will have to be entered every time a customer buys the product. This can lead to typing errors.
+#
+# Similary, if a product's ID is referred to in the Customers' table and is removed, other product details such as price,
+# will not be available.
+#
+# Relational databases have a mechanism to preven the deletion of the primary key if it is being used in the related table
+# so that the data integrity is intact.
+#
+# Since the Django models are mapped to the corresponding tables in the database, you can define a relationship such as
+# this between the two model fields.
+#
+# Types of Relationships:
+#
+#   There are three types of relationships that exist:
+#
+#       * One-to-One,
+#
+#       * One-to-Many, and
+#
+#       * Many-to-Many.
+#
+# Let's explore these by beginning with a "One-to-One" relationship.
+#
+# One-to-One relationship:
+#
+#   If a primary key is in one model, and only one record exists in the other related model, the two models are said to
+# have a "One-to-One" relationship.
+#
+# Let's use an example of a college model and a principal model. A college can have only one principal or it can be
+# similarly phrased as one person can be a principal of only one college.  ##
+
+
+class College(models.Model):
+    collegeID = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=50)
+    strength = models.IntegerField()
+    website = models.URLField()
+
+# In the principal model, you must provide the "CollegeID" field as the foreign key. The "on_delete" option specifies
+# the behavior in case the assoicated object in the primary model is deleted. The values are:
+#
+#   * CASCADE : deletes the object containing the "ForeignKey"
+#
+#   * PROTECT: Prevent deletion of the referenced object.
+#
+#   * RESTRICT: Prevent deletion of the referenced object by raising "RestrictedError"
+#
+# The principal model has the following field structure:  ##
+
+
+class Principal(models.Model):
+    collegeID = models.OneToOneField(College, on_delete=models.CASCADE)
+    Qualification = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+
+
+# When you run a migration on these models. respective tables are created with equivalent SQL queries: ##
+CREATE TABLE "myapp_college" ("CollegeID" integer NOT NULL PRIMARY KEY, "name" varchar(50) NOT NULL,
+                              "strength" integer NOT NULL, "website" varchar(200) NOT NULL)
+
+CREATE TABLE "myapp_principal" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "Qualification" varchar(50) NOT NULL,
+                                "email" varchar(50) NOT NULL,
+                                "CollegeID_id" integer NOT NULL UNIQUE REFERENCES "myapp_college" ("CollegeID") DEFERRABLE INITIALLY DEFERRED)
