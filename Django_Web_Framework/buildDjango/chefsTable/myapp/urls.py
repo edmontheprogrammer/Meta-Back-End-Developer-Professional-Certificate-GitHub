@@ -16,5 +16,6 @@ urlpatterns = [
     path('dishes/<str:dish>', views.menuitems),
     path('fruits/<str:fruit>', views.fruititems),
     path('drinks/<str:drink_name>', views.drinks, name="drink_name"),
+    path('form_home/', views.form_view, name="form_home"),
 
 ]

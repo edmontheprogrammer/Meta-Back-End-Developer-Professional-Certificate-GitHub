@@ -2,8 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 
+from myapp.forms import InputForm
 
 # Create your views here.
+
 
 def homemorning(request):
     path = request.path
@@ -85,3 +87,10 @@ def orders(request):
 
 def say_hello_7(request):
     return HttpResponse("Hello World from 'say_hello_7()' function ")
+
+
+def form_view(request):
+    # This is creating an instance of the form class "form = InputForm() "
+    form = InputForm()
+    context = {"form": form}
+    return render(request, "form_home.html", context)

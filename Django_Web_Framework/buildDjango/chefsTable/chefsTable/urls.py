@@ -34,4 +34,4 @@ urlpatterns = [
     #     name='myapp-little-lemon-restaurant'),
 ]
 
-handler404 =  'chefsTable.views.handler404'
+handler404 = 'chefsTable.views.handler404'
