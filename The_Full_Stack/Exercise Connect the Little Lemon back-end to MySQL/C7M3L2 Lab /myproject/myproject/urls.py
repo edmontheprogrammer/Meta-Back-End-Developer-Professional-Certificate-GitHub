@@ -1,4 +1,4 @@
-"""Littlelemon URL Configuration
+"""myproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -17,13 +17,5 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('api/', include('LittlelemonAPI.urls')),
-    path('auth/', include('djoser.urls')),
+    path('admin/', admin.site.urls),
 ]
-
-# Note 1:
-# You can access djoser default endpoints using this link
-# http://127.0.0.1:800/auth and adding the endpoints like "/users/" and /users/me/ in front of them
-# For example you can visit the "users" endpoint by adding this to the browser
-# "127.0.0.1:8000/auth/users/"
